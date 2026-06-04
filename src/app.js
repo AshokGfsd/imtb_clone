@@ -12,9 +12,9 @@ const app = express();
 
 app.use(
   cors({
+    origin: "http://localhast:5173",
     credentials: true,
-    origin: "*", // frontend URL
-  })
+  }),
 );
 app.use("/uploads", express.static("uploads"));
 app.use(express.json());
